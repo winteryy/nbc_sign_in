@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">nbc sign in</string>
+    <string name="id_text">아이디</string>
+    <string name="password_text">비밀번호</string>
+    <string name="input_id_hint">아이디를 입력하세요.</string>
+    <string name="input_password_hint">비밀번호를 입력하세요.</string>
+    <string name="sign_in">로그인</string>
+    <string name="sign_up">회원가입</string>
 </resources>

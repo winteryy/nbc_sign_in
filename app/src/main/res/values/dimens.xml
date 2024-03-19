@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--layout margin-->
+    <dimen name="margin_extra_small">6dp</dimen>
+    <dimen name="margin_small">9dp</dimen>
+    <dimen name="margin_medium">12dp</dimen>
+    <dimen name="margin_extra_large">36dp</dimen>
+
+    <!--layout padding-->
+    <dimen name="padding_large">15dp</dimen>
+    <dimen name="padding_extra_large">36dp</dimen>
+    
+    <!--text size-->
+    <dimen name="content_text_size">18sp</dimen>
+    <dimen name="button_text_size">18sp</dimen>
+</resources>
