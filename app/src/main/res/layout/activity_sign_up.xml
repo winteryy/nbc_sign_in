@@ -19,7 +19,7 @@
         android:layout_height="150dp"
         android:layout_marginBottom="@dimen/margin_small"
         android:scaleType="fitCenter"
-        android:src="@drawable/user_icon"
+        app:srcCompat="@drawable/user_icon"
         app:layout_constraintBottom_toTopOf="@id/nameTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
