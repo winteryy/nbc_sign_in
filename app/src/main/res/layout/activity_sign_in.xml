@@ -29,7 +29,7 @@
         android:id="@+id/idTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/margin_extra_small"
+        android:layout_marginBottom="@dimen/margin_extra_small"
         android:text="@string/id_text"
         android:textSize="@dimen/content_text_size"
         android:textStyle="bold"
