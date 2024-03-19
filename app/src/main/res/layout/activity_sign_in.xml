@@ -11,19 +11,19 @@
         android:id="@+id/halfGuideLine"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintGuide_percent="0.5"
-        android:orientation="horizontal" />
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
 
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/logoImageView"
         android:layout_width="250dp"
         android:layout_height="180dp"
+        android:layout_marginBottom="@dimen/margin_small"
         android:scaleType="fitCenter"
         android:src="@drawable/genesis_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/idTextView"
-        android:layout_marginBottom="@dimen/margin_small"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/idTextView"
@@ -33,17 +33,17 @@
         android:text="@string/id_text"
         android:textSize="@dimen/content_text_size"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/idInputEditText" />
+        app:layout_constraintBottom_toTopOf="@id/idInputEditText"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/idInputEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/input_id_hint"
+        app:layout_constraintBottom_toTopOf="@id/halfGuideLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/halfGuideLine" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/passwordTextView"
@@ -61,33 +61,33 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_extra_small"
+        android:hint="@string/input_password_hint"
+        android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        android:inputType="textPassword"
         app:layout_constraintTop_toBottomOf="@id/passwordTextView"
-        android:hint="@string/input_password_hint"
-        tools:text="123124124asdasd"/>
+        tools:text="123124124asdasd" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signInButton"
+        style="@style/Theme.NbcSignIn.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/sign_in"
-        style="@style/Theme.NbcSignIn.Button"
         android:layout_marginTop="@dimen/margin_extra_large"
+        android:text="@string/sign_in"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordInputEditText" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUpButton"
+        style="@style/Theme.NbcSignIn.Button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:text="@string/sign_up"
-        style="@style/Theme.NbcSignIn.Button"
         android:layout_marginTop="@dimen/margin_medium"
+        android:text="@string/sign_up"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/signInButton" />
 
 
