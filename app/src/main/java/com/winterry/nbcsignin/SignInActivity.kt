@@ -20,7 +20,7 @@ class SignInActivity : AppCompatActivity() {
             if(isValidSignIn(idString, passwordString)) {
                 Toast.makeText(this, getString(R.string.sign_in_success), Toast.LENGTH_SHORT).show()
                 startActivity(Intent(this, HomeActivity::class.java).apply {
-                    putExtra("id", idString)
+                    putExtra(ID, idString)
                 })
             }else {
                 Toast.makeText(this, getString(R.string.sign_in_failure), Toast.LENGTH_SHORT).show()
@@ -35,5 +35,9 @@ class SignInActivity : AppCompatActivity() {
 
     private fun isValidSignIn(idString: String, passwordString: String): Boolean {
         return idString.isNotEmpty() && passwordString.isNotEmpty()
+    }
+
+    companion object {
+        const val ID = "id"
     }
 }
