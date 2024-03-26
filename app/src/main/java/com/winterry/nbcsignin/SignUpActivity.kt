@@ -5,9 +5,13 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
+import com.winterry.nbcsignin.viewmodel.SignUpViewModel
 
 class SignUpActivity: AppCompatActivity() {
+
+    private val signUpViewModel: SignUpViewModel by viewModels()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,7 +22,8 @@ class SignUpActivity: AppCompatActivity() {
             val idString = findViewById<EditText>(R.id.idInputEditText).text.toString()
             val passwordString = findViewById<EditText>(R.id.passwordInputEditText).text.toString()
 
-            if(isValidSignUp(nameString, idString, passwordString)) {
+            if(isValidSignUp(nameString, idString, passwordString) && signUpViewModel.registerAuth(nameString, idString, passwordString)) {
+                Toast.makeText(this, signUpViewModel.getAuthString(), Toast.LENGTH_SHORT).show()
                 val intent = Intent().putExtra(SignInActivity.USER_INFO, arrayListOf(idString, passwordString))
                 setResult(RESULT_OK, intent)
                 finish()
