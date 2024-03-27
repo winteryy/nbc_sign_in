@@ -13,13 +13,13 @@
         android:theme="@style/Theme.NbcSignIn"
         tools:targetApi="31">
         <activity
-            android:name=".HomeActivity"
+            android:name=".presentation.HomeActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpActivity"
+            android:name=".presentation.SignUpActivity"
             android:exported="false"/>
         <activity
-            android:name=".SignInActivity"
+            android:name=".presentation.SignInActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

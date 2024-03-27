@@ -1,4 +1,4 @@
-package com.winterry.nbcsignin
+package com.winterry.nbcsignin.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
+import com.winterry.nbcsignin.R
 
 class SignInActivity : AppCompatActivity() {
 

@@ -41,6 +41,27 @@
         android:layout_height="wrap_content"
         android:hint="@string/input_name_hint"
         android:layout_marginBottom="@dimen/margin_extra_small"
+        app:layout_constraintBottom_toTopOf="@id/emailTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/margin_extra_small"
+        android:text="@string/email_text"
+        android:textSize="@dimen/content_text_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/emailInputEditText"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/emailInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="@string/input_email_hint"
+        android:layout_marginBottom="@dimen/margin_extra_small"
         app:layout_constraintBottom_toTopOf="@id/idTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -85,8 +106,30 @@
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordTextView"
-        tools:text="123124124asdasd" />
+        app:layout_constraintTop_toBottomOf="@id/passwordTextView" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/passwordConfirmTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_small"
+        android:text="@string/password_confirm_text"
+        android:textSize="@dimen/content_text_size"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordInputEditText" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/passwordConfirmInputEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_extra_small"
+        android:hint="@string/input_password_confirm_hint"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/passwordConfirmTextView"
+        tools:text="123124124asdasd"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUpButton"
@@ -97,6 +140,6 @@
         android:text="@string/sign_up"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/passwordInputEditText" />
+        app:layout_constraintTop_toBottomOf="@id/passwordConfirmInputEditText" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
