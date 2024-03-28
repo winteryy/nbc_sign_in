@@ -2,12 +2,12 @@
 ## 회원가입
 
 ### 실행 이미지
-
+<div align="center">
 <p align="center" width="100%">
     <image src = "./screenshots/sc_001.png" width="30%" >
 </p>
 
-#### <center>SignInActivity</center>
+#### SignInActivity
 <br/>
 <br/>
   
@@ -15,7 +15,7 @@
     <image src = "./screenshots/sc_002.png" width="30%" >
 </p>
 
-#### <center>SignUpActivity</center>
+#### SignUpActivity
 <br/>
 <br/>
   
@@ -23,7 +23,7 @@
     <image src = "./screenshots/sc_003.png" width="30%" >
 </p>
 
-#### <center>HomeActivity</center>
+#### HomeActivity
 <br/>
 <br/>
 
@@ -32,9 +32,10 @@
     <image src = "./screenshots/sc_005.png"width="30%" >
 </p>
 
-#### <center>Validation 및 `Toast` 발생</center>
+#### Validation 및 `Toast` 발생
 <br/>
 <br/>
+</div>
 
 ### 요구사항
 - [x] 지정된 양식에 맞춰 UI 및 코드 구현하기
