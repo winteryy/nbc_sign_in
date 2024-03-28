@@ -7,27 +7,34 @@
     <image src = "./screenshots/sc_001.png" width="30%" >
 </p>
 
-- SignInActivity
+#### <center>SignInActivity</center>
+<br/>
+<br/>
   
 <p align="center" width="100%">
     <image src = "./screenshots/sc_002.png" width="30%" >
 </p>
 
-- SignUpActivity
+#### <center>SignUpActivity</center>
+<br/>
+<br/>
   
 <p align="center" width="100%">
     <image src = "./screenshots/sc_003.png" width="30%" >
 </p>
 
-- HomeActivity
+#### <center>HomeActivity</center>
+<br/>
+<br/>
 
 <p align="center" width="100%">
     <image src = "./screenshots/sc_004.png"width="30%" >
     <image src = "./screenshots/sc_005.png"width="30%" >
 </p>
 
-- Validation 및 `Toast` 발생
-    
+#### <center>Validation 및 `Toast` 발생</center>
+<br/>
+<br/>
 
 ### 요구사항
 - [x] 지정된 양식에 맞춰 UI 및 코드 구현하기
