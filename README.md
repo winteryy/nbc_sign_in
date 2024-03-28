@@ -4,26 +4,26 @@
 ### 실행 이미지
 
 <p align="center" width="100%">
-    <image src = "https://github.com/winteryy/nbc_sign_in/tree/develop/screenshots/sc_001.png" width="30%" >
+    <image src = "./screenshots/sc_001.png" width="30%" >
 </p>
 
 - SignInActivity
   
 <p align="center" width="100%">
-    <image src = "https://github.com/winteryy/nbc_sign_in/tree/develop/screenshots/sc_002.png" width="30%" >
+    <image src = "./screenshots/sc_002.png" width="30%" >
 </p>
 
 - SignUpActivity
   
 <p align="center" width="100%">
-    <image src = "https://github.com/winteryy/nbc_sign_in/tree/develop/screenshots/sc_003.png" width="30%" >
+    <image src = "./screenshots/sc_003.png" width="30%" >
 </p>
 
 - HomeActivity
 
 <p align="center" width="100%">
-    <image src = "https://github.com/winteryy/nbc_sign_in/tree/develop/screenshots/sc_004.png"width="30%" >
-    <image src = "https://github.com/winteryy/nbc_sign_in/tree/develop/screenshots/sc_005.png"width="30%" >
+    <image src = "./screenshots/sc_004.png"width="30%" >
+    <image src = "./screenshots/sc_005.png"width="30%" >
 </p>
 
 - Validation 및 `Toast` 발생
