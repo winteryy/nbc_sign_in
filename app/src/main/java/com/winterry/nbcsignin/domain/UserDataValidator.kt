@@ -5,7 +5,7 @@ import android.util.Patterns
 class UserDataValidator {
 
     fun validateUserData(name: String, email: String, id: String, password: String, passwordConfirm: String): Result<Unit, AuthError> {
-        if(name.isBlank() || id.isBlank() || password.isBlank() || passwordConfirm.isBlank()) {
+        if(name.isBlank() || email.isBlank() || id.isBlank() || password.isBlank() || passwordConfirm.isBlank()) {
             return Result.Error(AuthError.EXIST_BLANK)
         }
 
