@@ -4,53 +4,65 @@ import android.util.Patterns
 
 class UserDataValidator {
 
-    fun validateUserData(name: String, email: String, id: String, password: String, passwordConfirm: String): Result<Unit, AuthError> {
-        if(name.isBlank() || email.isBlank() || id.isBlank() || password.isBlank() || passwordConfirm.isBlank()) {
-            return Result.Error(AuthError.EXIST_BLANK)
+    fun validateName(name: String): Result<Unit, NameError> {
+        if(name.isBlank()) {
+            return Result.Error(NameError.EXIST_BLANK)
         }
-
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
-            return Result.Error(AuthError.INVALID_EMAIL)
-        }
-
-        val pwValidResult = validatePassword(password, passwordConfirm)
-        if(pwValidResult is Result.Error) {
-            return pwValidResult
-        }
-
         return Result.Success(Unit)
     }
 
-    private fun validatePassword(password: String, passwordConfirm: String): Result<Unit, AuthError> {
-        if(password!=passwordConfirm) {
-            return Result.Error(AuthError.CONFIRM_UNMATCHED)
+    fun validateEmail(email: String): Result<Unit, EmailError> {
+        if(email.isBlank()) {
+            return Result.Error(EmailError.EXIST_BLANK)
+        }else if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()) {
+            return Result.Error(EmailError.INVALID_EMAIL)
+        }
+        return Result.Success(Unit)
+    }
+
+    fun validateId(id: String): Result<Unit, IdError> {
+        if(id.isBlank()) {
+            return Result.Error(IdError.EXIST_BLANK)
+        }
+        return Result.Success(Unit)
+    }
+
+    fun validatePassword(password: String): Result<Unit, PasswordError> {
+        if(password.isBlank()) {
+            return Result.Error(PasswordError.EXIST_BLANK)
         }
 
         if(password.length !in 8..16) {
-            return Result.Error(AuthError.INVALID_LENGTH)
+            return Result.Error(PasswordError.INVALID_LENGTH)
         }
 
         val hasDigit = password.any { it.isDigit() }
         if(!hasDigit) {
-            return Result.Error(AuthError.NO_DIGIT)
+            return Result.Error(PasswordError.NO_DIGIT)
         }
 
         val hasLowerCaseChar = password.any { it.isLowerCase() }
         if(!hasLowerCaseChar) {
-            return Result.Error(AuthError.NO_LOWERCASE)
+            return Result.Error(PasswordError.NO_LOWERCASE)
         }
 
         val hasUppercaseChar = password.any { it.isUpperCase() }
         if(!hasUppercaseChar) {
-            return Result.Error(AuthError.NO_UPPERCASE)
+            return Result.Error(PasswordError.NO_UPPERCASE)
         }
 
         val hasSpecialChar = password.any { !it.isLetterOrDigit() }
         if(!hasSpecialChar) {
-            return Result.Error(AuthError.NO_SPECIAL_SIGN)
+            return Result.Error(PasswordError.NO_SPECIAL_SIGN)
         }
 
         return Result.Success(Unit)
     }
 
+    fun validatePasswordConfirm(password: String, passwordConfirm: String): Result<Unit, PasswordConfirmError> {
+        if(password!=passwordConfirm) {
+            return Result.Error(PasswordConfirmError.CONFIRM_UNMATCHED)
+        }
+        return Result.Success(Unit)
+    }
 }

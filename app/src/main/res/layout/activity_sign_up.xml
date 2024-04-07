@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:paddingHorizontal="@dimen/padding_extra_large"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:paddingHorizontal="@dimen/padding_extra_large">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/halfGuideLine"
@@ -19,10 +19,10 @@
         android:layout_height="150dp"
         android:layout_marginBottom="@dimen/margin_small"
         android:scaleType="fitCenter"
-        app:srcCompat="@drawable/user_icon"
         app:layout_constraintBottom_toTopOf="@id/nameTextView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/user_icon" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/nameTextView"
@@ -39,11 +39,20 @@
         android:id="@+id/nameInputEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/input_name_hint"
         android:layout_marginBottom="@dimen/margin_extra_small"
+        android:hint="@string/input_name_hint"
         app:layout_constraintBottom_toTopOf="@id/emailTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/nameWarnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/nameInputEditText"
+        app:layout_constraintEnd_toEndOf="@id/nameInputEditText"
+        tools:text="확인용 텍스트" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/emailTextView"
@@ -60,11 +69,20 @@
         android:id="@+id/emailInputEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="@string/input_email_hint"
         android:layout_marginBottom="@dimen/margin_extra_small"
+        android:hint="@string/input_email_hint"
         app:layout_constraintBottom_toTopOf="@id/idTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emailWarnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/emailInputEditText"
+        app:layout_constraintEnd_toEndOf="@id/emailInputEditText"
+        tools:text="확인용 텍스트" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/idTextView"
@@ -82,9 +100,18 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:hint="@string/input_id_hint"
-        app:layout_constraintTop_toBottomOf="@id/halfGuideLine"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/halfGuideLine" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/idWarnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/idInputEditText"
+        app:layout_constraintEnd_toEndOf="@id/idInputEditText"
+        tools:text="아이디 좀 입력하세요 제발요" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/passwordTextView"
@@ -109,6 +136,15 @@
         app:layout_constraintTop_toBottomOf="@id/passwordTextView" />
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/passwordWarnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/grey"
+        app:layout_constraintBottom_toTopOf="@id/passwordInputEditText"
+        app:layout_constraintEnd_toEndOf="@id/passwordInputEditText"
+        tools:text="확인용 텍스트" />
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/passwordConfirmTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -129,7 +165,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/passwordConfirmTextView"
-        tools:text="123124124asdasd"/>
+        tools:text="123124124asdasd" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/passwordConfirmWarnTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/red"
+        app:layout_constraintBottom_toTopOf="@id/passwordConfirmInputEditText"
+        app:layout_constraintEnd_toEndOf="@id/passwordConfirmInputEditText"
+        tools:text="확인용 텍스트" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/signUpButton"
