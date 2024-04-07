@@ -143,7 +143,6 @@ class SignUpActivity : AppCompatActivity() {
                             binding.passwordConfirmInputEditText.text.toString()
                         )
                     }
-
                     EditTextTag.PASSWORD_CONFIRM_EDIT_TEXT -> signUpViewModel.validatePasswordConfirm(
                         binding.passwordInputEditText.text.toString(),
                         it.toString()
@@ -155,8 +154,8 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun setFocusChangeListeners() {
         editTextList.forEach { editTextView ->
-            editTextView.setOnFocusChangeListener { view, _ ->
-                when (view.tag as EditTextTag) {
+            editTextView.setOnFocusChangeListener { _, _ ->
+                when (editTextView.tag as EditTextTag) {
                     EditTextTag.NAME_EDIT_TEXT -> signUpViewModel.validateName(editTextView.text.toString())
                     EditTextTag.EMAIL_EDIT_TEXT -> signUpViewModel.validateEmail(editTextView.text.toString())
                     EditTextTag.ID_EDIT_TEXT -> signUpViewModel.validateId(editTextView.text.toString())
@@ -167,7 +166,6 @@ class SignUpActivity : AppCompatActivity() {
                             binding.passwordConfirmInputEditText.text.toString()
                         )
                     }
-
                     EditTextTag.PASSWORD_CONFIRM_EDIT_TEXT -> signUpViewModel.validatePasswordConfirm(
                         binding.passwordInputEditText.text.toString(),
                         editTextView.text.toString()
